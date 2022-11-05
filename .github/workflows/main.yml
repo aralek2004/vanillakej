@@ -77,17 +77,16 @@ jobs:
             context: ./
             file: ./Dockerfile
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-vanillabeyk:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-vanillakej:latest
           
         - name: Run the image in a container
           uses: addnab/docker-run-action@v3
           with:
-            image: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-vanillabeyk:latest
+            image: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-vanillakej:latest
             run: |
               echo "runing the docker image"
               echo "Testing the nodejs  app endpoints"
               echo ${{ steps.docker_build.outputs.digest }}
-
               # deploy application to heroku            
   deploy_to_heroku:
       name: Deploy to Heroku

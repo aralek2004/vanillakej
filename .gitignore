@@ -11,8 +11,6 @@ npm-debug.log
 *.md
 !README*.md
 README-secret.md
-# github related files
-.github/
 # Build and Release Folders
 bin-debug/
 bin-release/
